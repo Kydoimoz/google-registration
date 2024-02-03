@@ -3,7 +3,7 @@ import React from "react";
 import { useState } from "react";
 import styles from "../components/UserModal.module.css";
 import Image from "next/image";
-import { signIn, useSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
 const UserModal = ({ onClose }) => {
     const [isOpen, setIsOpen] = useState(true);
 
