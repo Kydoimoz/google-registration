@@ -20,16 +20,15 @@ const UserModal = ({ onClose }) => {
                 </button>
                 <h2>Sign In</h2>
                 <button className={styles.btn} onClick={() => signIn("google")}>
-                    <Image src="/images/google-logo.jpg" height={30} width={30} />
+                    {/* Use a proper alt text for accessibility */}
+                    <Image src="/images/google-logo.jpg" height={30} width={30} alt="Google Logo" />
                     <p>Sign In with Google</p>
                 </button>
                 <br />
-                {   /* <button className={styles.btn} onClick={handleLoginWithApple}>
-                    <Image src="/images/apple-logo.jpg" height={30} width={30} />
-                    <p>Sign In with Apple</p>
-    </button>*/}
+
                 <button className={styles.btnInsta} onClick={() => signIn("twitter")}>
-                    <p>Sign In with Facebook</p>
+                    {/* Update text to be more accurate */}
+                    <p>Sign In with Twitter</p>
                 </button>
             </div>
         </div>
