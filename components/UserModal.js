@@ -5,7 +5,6 @@ import styles from "../components/UserModal.module.css";
 import Image from "next/image";
 import { signIn, useSession } from "next-auth/react";
 const UserModal = ({ onClose }) => {
-    const { data: session } = useSession();
     const [isOpen, setIsOpen] = useState(true);
 
     const handleClose = () => {
