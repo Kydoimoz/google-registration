@@ -29,9 +29,8 @@ const UserModal = ({ onClose }) => {
                     <Image src="/images/apple-logo.jpg" height={30} width={30} />
                     <p>Sign In with Apple</p>
     </button>*/}
-                <button className={styles.btn} onClick={() => signIn("instagram")}>
-                    <Image src="/images/" height={30} width={30} />
-                    <p>Sign In</p>
+                <button className={styles.btnInsta} onClick={() => signIn("instagram")}>
+                    <p>Sign In with Instagram</p>
                 </button>
             </div>
         </div>
