@@ -28,8 +28,8 @@ const UserModal = ({ onClose }) => {
                     <Image src="/images/apple-logo.jpg" height={30} width={30} />
                     <p>Sign In with Apple</p>
     </button>*/}
-                <button className={styles.btnInsta} onClick={() => signIn("instagram")}>
-                    <p>Sign In with Instagram</p>
+                <button className={styles.btnInsta} onClick={() => signIn("facebook")}>
+                    <p>Sign In with Facebook</p>
                 </button>
             </div>
         </div>

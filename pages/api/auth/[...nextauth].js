@@ -2,6 +2,7 @@ import connectDB from "@/libs/connectDB";
 import User from "../../../models/dbschema";
 import NextAuth from "next-auth";
 import GoogleProvider from 'next-auth/providers/google';
+import FacebookProvider from "next-auth/providers/facebook";
 //import AppleProvider from "next-auth/providers/apple";
 import InstagramProvider from "next-auth/providers/instagram";
 import CredentialsProvider from "next-auth/providers/credentials";
@@ -19,9 +20,13 @@ export const authOptions = {
              clientId: process.env.APPLE_CLIENT_ID,
              clientSecret: process.env.APPLE_SECRET
          }),*/
-        InstagramProvider({
+        /*InstagramProvider({
             clientId: process.env.INSTAGRAM_CLIENT_ID,
             clientSecret: process.env.INSTAGRAM_CLIENT_SECRET
+        })*/
+        FacebookProvider({
+            clientId: process.env.FACEBOOK_CLIENT_ID,
+            clientSecret: process.env.FACEBOOK_CLIENT_SECRET
         })
     ],
     cookies: {
