@@ -3,6 +3,8 @@ import User from "../../../models/dbschema";
 import NextAuth from "next-auth";
 import GoogleProvider from 'next-auth/providers/google';
 import FacebookProvider from "next-auth/providers/facebook";
+
+import TwitterProvider from "next-auth/providers/twitter";
 //import AppleProvider from "next-auth/providers/apple";
 import InstagramProvider from "next-auth/providers/instagram";
 import CredentialsProvider from "next-auth/providers/credentials";
@@ -24,9 +26,10 @@ export const authOptions = {
             clientId: process.env.INSTAGRAM_CLIENT_ID,
             clientSecret: process.env.INSTAGRAM_CLIENT_SECRET
         })*/
-        FacebookProvider({
-            clientId: process.env.FACEBOOK_CLIENT_ID,
-            clientSecret: process.env.FACEBOOK_CLIENT_SECRET
+        TwitterProvider({
+            clientId: process.env.TWITTER_CLIENT_ID,
+            clientSecret: process.env.TWITTER_CLIENT_SECRET,
+            version: "2.0",
         })
     ],
     cookies: {
@@ -42,7 +45,7 @@ export const authOptions = {
     },
     callbacks: {
         async signIn({ user, account }) {
-            if (account.provider === "facebook") {
+            if (account.provider === "twitter") {
                 const { name, email } = user;
                 try {
                     await connectDB();
