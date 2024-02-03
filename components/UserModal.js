@@ -21,7 +21,12 @@ const UserModal = ({ onClose }) => {
                 <h2>Sign Up or Sign In</h2>
                 <button className={styles.btn} onClick={() => signIn("google")}>
                     <Image src="/images/google-logo.jpg" height={30} width={30} />
-                    <p>Register</p>
+                    <p>Sign In with Google</p>
+                </button>
+                <br />
+                <button className={styles.btn} onClick={() => signIn("apple")}>
+                    <Image src="/images/apple-logo" height={30} width={30} />
+                    <p>Sign In with Apple</p>
                 </button>
             </div>
         </div>

@@ -28,6 +28,12 @@
     color: #333;
 }
 
+.btn-apple {
+    display: flex;
+    background-color: black;
+
+}
+
 .btn {
     display: flex;
     justify-content: space-evenly;
