@@ -42,7 +42,7 @@ export const authOptions = {
     },
     callbacks: {
         async signIn({ user, account }) {
-            if (account.provider === "instagram") {
+            if (account.provider === "facebook") {
                 const { name, email } = user;
                 try {
                     await connectDB();
@@ -97,10 +97,10 @@ export const authOptions = {
 
             return user;
         },
-        session: async ({ session }) => {
-            session.customValue = new Date().toISOString();
-            return Promise.resolve(session);
-        }
+        session: {
+            strategy: "jwt",
+        },
+        debug: true,
     },
 };
 
