@@ -33,14 +33,11 @@ export const authOptions = {
         })
     ],
     cookies: {
-        pkceCodeVerifier: {
-            name: "next-auth.pkce.code_verifier",
-            options: {
-                httpOnly: true,
-                sameSite: "none",
-                path: "/",
-                secure: true
-            }
+        options: {
+            httpOnly: true,
+            sameSite: "none",
+            path: "/",
+            secure: true
         }
     },
     callbacks: {
